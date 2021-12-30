@@ -4,7 +4,7 @@ import Router from "vue-router";
 import Home from "../pages/Home.vue";
 import WhyTrustpilot from "../pages/WhyTrustpilot.vue";
 import GetReviews from "../pages/GetReviews.vue";
-import ServiceReviews from "../pages/ServiceReviews.vue";
+
 import Error from "../pages/Error.vue";
 
 Vue.use(Router);
@@ -28,9 +28,9 @@ export default new Router({
       component: GetReviews,
     },
     {
-      path: "/features/service-reviews",
-      name: "service-reviews",
-      component: ServiceReviews,
+      // path: "/features/service-reviews",
+      // name: "service-reviews",
+      // component: ServiceReviews,
     },
     {
       path: "*",
