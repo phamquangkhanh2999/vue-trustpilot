@@ -27,11 +27,7 @@ export default new Router({
       name: "get-reviews",
       component: GetReviews,
     },
-    {
-      // path: "/features/service-reviews",
-      // name: "service-reviews",
-      // component: ServiceReviews,
-    },
+
     {
       path: "*",
       name: "Error",

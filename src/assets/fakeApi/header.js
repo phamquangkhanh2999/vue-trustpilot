@@ -4,7 +4,7 @@ const header = [
     name: "Get Reviews",
     path: "/features/get-reviews",
     connects: [
-      { to: "/features/service-reviews", title: " Service Reviews" },
+      { to: "/", title: " Service Reviews" },
       { to: "/", title: "Product Reviews" },
       { to: "/", title: "Location Reviews" },
       { to: "/", title: "Review Invitations" },
