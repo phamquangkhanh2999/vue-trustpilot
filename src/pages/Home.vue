@@ -7,21 +7,22 @@
     <Content :data="content[1]" />
     <CardBottom :card="cards" />
     <ContentRate />
-    <EmailSignup />
+    <EmailSignup :color="colorEmail" />
   </div>
 </template>
 <script>
-import PageHero from "../components/PageHero.vue";
-import CardTop from "../components/CardTop.vue";
-import Content from "../components/ContentTop.vue";
-import CardBottom from "../components/CardBottom.vue";
-import ContentRate from "../components/ContentRate.vue";
-import EmailSignup from "../components/EmailSignup.vue";
+import PageHero from "@/components/PageHero.vue";
+import CardTop from "@/components/CardTop.vue";
+import Content from "@/components/ContentTop.vue";
+import CardBottom from "@/components/CardBottom.vue";
+import ContentRate from "@/components/ContentRate.vue";
+import EmailSignup from "@/components/EmailSignup.vue";
 
 export default {
   name: "Home",
   data() {
     return {
+      colorEmail: "#0a4469",
       content: [
         {
           title: "Star ratings in the right place, at the right time.",

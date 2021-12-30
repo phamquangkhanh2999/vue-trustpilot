@@ -39,15 +39,15 @@
       </div>
     </div>
     <ContentRate />
-    <EmailSignup />
+    <EmailSignup :color="colorEmail" />
   </div>
 </template>
 <script>
 import Headline from "@/components/why-trustpilot/Headline.vue";
 import Statements from "@/components/why-trustpilot/Statements.vue";
 import ContentWrapper from "@/components/why-trustpilot/ContentWrapper.vue";
-import ContentRate from "../components/ContentRate.vue";
-import EmailSignup from "../components/EmailSignup.vue";
+import ContentRate from "@/components/ContentRate.vue";
+import EmailSignup from "@/components/EmailSignup.vue";
 
 export default {
   name: "WhyTrustpilot",
@@ -60,6 +60,7 @@ export default {
   },
   data() {
     return {
+      colorEmail: "#2b2b85",
       statements: [
         {
           id: 1,

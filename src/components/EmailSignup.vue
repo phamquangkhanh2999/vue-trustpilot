@@ -1,5 +1,5 @@
 <template>
-  <div class="emailSignup">
+  <div class="emailSignup" :style="{ backgroundColor: color }">
     <div class="emailSignup__inner">
       <h2>Let's talk</h2>
       <h4>Request a personal live demo</h4>
@@ -39,11 +39,11 @@
 <script>
 export default {
   name: "EmailSignup",
+  props: ["color"],
 };
 </script>
 <style lang="scss" scoped>
 .emailSignup {
-  background-color: #0a4469;
   padding: 120px 30px 140px;
 
   &__inner {

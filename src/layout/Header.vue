@@ -209,10 +209,11 @@ export default {
       margin: 40px auto 0px;
       transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
       transform: translateY(0px);
+      text-align: left;
 
       &--item {
         font-size: 1.2rem !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
         padding: 0 !important;
       }
     }
@@ -272,6 +273,10 @@ export default {
     cursor: pointer;
     position: relative;
 
+    @include media_tablet {
+      display: block !important;
+    }
+
     &--fakeLink {
       color: $txt-white;
       font-weight: 500;
@@ -281,7 +286,6 @@ export default {
         @include flex(center, space-between);
         font-size: 1.2rem;
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         padding: 0;
       }
     }
@@ -293,6 +297,7 @@ export default {
     width: 600px;
     opacity: 0;
     visibility: hidden;
+    /* visibility: visible; */
     position: absolute;
     left: 50%;
     top: 43px;
@@ -303,9 +308,56 @@ export default {
       opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s,
       transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
 
+    // media tablet
     @include media_tablet {
-      display: none;
+      display: inline;
+      opacity: 0;
+      visibility: hidden;
+      /* visibility: visible;
+      position: static; */
+      max-height: 1200px;
+      box-shadow: none;
+
+      &__wrapper {
+        max-height: 100%;
+        display: block !important;
+        text-align: left !important;
+        box-shadow: none !important;
+
+        &:before {
+          content: none !important;
+        }
+        &__inner {
+          display: inline-block !important;
+          width: 100%;
+          padding: 10px 0 0 !important;
+          background: none !important;
+          &__section {
+            width: 100% !important;
+
+            &__list {
+              padding-left: 20px;
+
+              &--item {
+                font-size: 1.1rem;
+                line-height: 1;
+                font-weight: 500;
+                color: $main-white;
+              }
+            }
+
+            &--title {
+              font-size: 0.9rem !important;
+              color: $txt-footer !important;
+              margin-bottom: 0 !important;
+              border: none !important;
+            }
+          }
+        }
+      }
     }
+
+    // end media tablet
 
     &__wrapper {
       max-width: 600px;
@@ -341,6 +393,7 @@ export default {
           width: 50%;
           padding: 0px 25px;
           margin: 0px 0px 20px;
+
           &--title {
             cursor: pointer;
             display: block;
@@ -369,14 +422,22 @@ export default {
         background: rgb(242, 242, 245);
         border-top: 1px solid rgb(220, 220, 230);
         color: $txt-blue;
+
+        @include media_tablet {
+          display: none;
+        }
       }
     }
   }
 
   &__linksWrapper:hover &__subLink {
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     opacity: 1;
     visibility: visible;
+
+    @include media_tablet {
+      position: static;
+    }
   }
 
   .icon-active {

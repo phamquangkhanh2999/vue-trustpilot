@@ -3,18 +3,19 @@
     <Jumbotron :data="jumbotron[0]" />
     <Card :card="cards[0]" />
     <Quote />
-    <EmailSignup />
+    <EmailSignup :color="colorEmail" />
   </div>
 </template>
 <script>
-import Jumbotron from "../components/features/Jumbotron.vue";
-import Quote from "../components/features/Quote.vue";
-import Card from "../components/CardBottom.vue";
-import EmailSignup from "../components/EmailSignup.vue";
+import Jumbotron from "@/components/features/Jumbotron.vue";
+import Quote from "@/components/features/Quote.vue";
+import Card from "@/components/CardBottom.vue";
+import EmailSignup from "@/components/EmailSignup.vue";
 export default {
   name: "GetReviews",
   data() {
     return {
+      colorEmail: "#e9a400",
       cards: [
         {
           name: "",

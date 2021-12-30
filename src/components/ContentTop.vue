@@ -9,7 +9,7 @@
             {{ data.desc }}
           </p>
         </div>
-        <button v-show="typeof data.btn == undefined">{{ data.btn }}</button>
+        <button>{{ data.btn }}</button>
       </div>
       <div class="content__inner__right">
         <img :src="data.img" alt="" />
@@ -27,13 +27,9 @@
             {{ data.desc }}
           </p>
         </div>
-        <button
-          v-if="typeof data.btn == undefined || data.btn == null"
-          :style="{ display: none }"
-        >
+        <button>
           {{ data.btn }}
         </button>
-        <button v-else>{{ data.btn }}</button>
       </div>
     </div>
   </div>
@@ -50,10 +46,9 @@ export default {
 
   &__test {
     grid-template-columns: 64.5% 35.5% !important;
-
     @include media_tablet {
       padding: 200px 30px !important;
-      grid-template-columns: auto;
+      grid-template-columns: auto !important;
       grid-column-gap: 0 !important;
     }
 
@@ -71,7 +66,7 @@ export default {
     @include media_tablet {
       padding: 200px 30px !important;
       grid-template-columns: auto;
-      grid-column-gap: 0;
+      grid-column-gap: 0 !important;
     }
 
     &__left {

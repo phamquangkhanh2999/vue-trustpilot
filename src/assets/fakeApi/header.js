@@ -13,7 +13,7 @@ const header = [
   {
     id: 2,
     name: "Manage Reviews",
-    path: "/",
+    path: "/features/manage-reviews",
     connects: [
       { to: "/", title: "Join the community" },
       { to: "/", title: "Leave a review" },
@@ -23,7 +23,7 @@ const header = [
   {
     id: 3,
     name: "Showcase Reviews",
-    path: "/",
+    path: "/features/showcase-reviews",
     connects: [
       { to: "/", title: "Review SEO" },
       { to: "/", title: "TrustBox Widgets" },
@@ -34,7 +34,7 @@ const header = [
   {
     id: 4,
     name: "Analyze Reviews",
-    path: "/",
+    path: "/features/analyze-reviews",
     connects: [
       { to: "/", title: " Review Insights" },
       { to: "/", title: "Dashboard and Analytic}s" },
