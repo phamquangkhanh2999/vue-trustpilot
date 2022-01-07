@@ -8,8 +8,12 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import router from "./router";
 
 import CatCarousel from "vue-cat-carousel";
-
 Vue.use(CatCarousel);
+
+import VueSnap from "vue-snap";
+import "vue-snap/dist/vue-snap.css";
+
+Vue.use(VueSnap);
 
 library.add(fas, fab);
 

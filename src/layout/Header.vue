@@ -66,8 +66,8 @@
             </div>
           </div>
           <!-- end dropdown -->
-          <router-link tag="a" class="header__list--item" to="/">
-            Plans
+          <router-link tag="a" class="header__list--item" to="/categories">
+            Categories
           </router-link>
           <router-link tag="a" class="header__list--item" to="/">
             Customer Stories

@@ -2,9 +2,8 @@
   <div>
     <PageHero />
     <CardTop />
-    <Content :data="content[0]" />
-    <Content :data="content[2]" />
-    <Content :data="content[1]" />
+    <content-top v-for="(item, index) in content" :key="index" :data="item" />
+
     <CardBottom :card="cards" />
     <ContentRate />
     <EmailSignup :color="colorEmail" />
@@ -13,10 +12,10 @@
 <script>
 import PageHero from "@/components/PageHero.vue";
 import CardTop from "@/components/CardTop.vue";
-import Content from "@/components/ContentTop.vue";
 import CardBottom from "@/components/CardBottom.vue";
 import ContentRate from "@/components/ContentRate.vue";
 import EmailSignup from "@/components/EmailSignup.vue";
+import ContentTop from "../components/ContentTop.vue";
 
 export default {
   name: "Home",
@@ -80,10 +79,10 @@ export default {
   components: {
     PageHero,
     CardTop,
-    Content,
     CardBottom,
     ContentRate,
     EmailSignup,
+    ContentTop,
   },
 };
 </script>

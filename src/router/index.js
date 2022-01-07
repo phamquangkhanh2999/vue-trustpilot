@@ -7,6 +7,8 @@ import ManageReviw from "@/pages/ManageReviews.vue";
 import ShowCaseReviews from "@/pages/ShowCaseReviews.vue";
 import AnalyzeReviews from "@/pages/AnalyzeReviews.vue";
 import GetReviews from "@/pages/GetReviews.vue";
+import TrustpilotHome from "@/pages/TrustpilotHome.vue";
+import Category from "@/pages/Category.vue";
 
 import Error from "@/pages/Error.vue";
 
@@ -44,6 +46,16 @@ export default new Router({
       path: "/features/analyze-reviews",
       name: "analyze-reviews",
       component: AnalyzeReviews,
+    },
+    {
+      path: "/trustpilot/home",
+      name: "trustpilot-home",
+      component: TrustpilotHome,
+    },
+    {
+      path: "/categories",
+      name: "categories",
+      component: Category,
     },
     {
       path: "*",
