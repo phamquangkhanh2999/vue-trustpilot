@@ -161,11 +161,9 @@
               filters.
             </p>
           </div>
-          <categories-rate />
-          <categories-rate />
-          <categories-rate />
-          <categories-rate />
-          <categories-rate />
+          <router-link to="ReviewCategory">
+            <categories-rate />
+          </router-link>
         </div>
       </div>
     </div>

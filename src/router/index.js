@@ -9,6 +9,7 @@ import AnalyzeReviews from "@/pages/AnalyzeReviews.vue";
 import GetReviews from "@/pages/GetReviews.vue";
 import TrustpilotHome from "@/pages/TrustpilotHome.vue";
 import Category from "@/pages/Category.vue";
+import ReviewCategory from "@/pages/ReviewCategory.vue";
 
 import Error from "@/pages/Error.vue";
 
@@ -56,6 +57,11 @@ export default new Router({
       path: "/categories",
       name: "categories",
       component: Category,
+    },
+    {
+      path: "/ReviewCategory",
+      name: "ReviewCategory",
+      component: ReviewCategory,
     },
     {
       path: "*",
